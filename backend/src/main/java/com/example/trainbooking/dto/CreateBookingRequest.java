@@ -16,6 +16,24 @@ public class CreateBookingRequest {
     @NotBlank
     private String passengerEmail;
 
+    @NotBlank
+    private String passengerMobile;
+
+    @Min(1)
+    private int passengerAge;
+
+    @NotBlank
+    private String passengerGender;
+
+    @NotBlank
+    private String travelClass;
+
+    @NotBlank
+    private String quota;
+
+    @NotBlank
+    private String paymentMode;
+
     @Min(1)
     private int seatsBooked;
 
@@ -43,6 +61,54 @@ public class CreateBookingRequest {
         this.passengerEmail = passengerEmail;
     }
 
+    public String getPassengerMobile() {
+        return passengerMobile;
+    }
+
+    public void setPassengerMobile(String passengerMobile) {
+        this.passengerMobile = passengerMobile;
+    }
+
+    public int getPassengerAge() {
+        return passengerAge;
+    }
+
+    public void setPassengerAge(int passengerAge) {
+        this.passengerAge = passengerAge;
+    }
+
+    public String getPassengerGender() {
+        return passengerGender;
+    }
+
+    public void setPassengerGender(String passengerGender) {
+        this.passengerGender = passengerGender;
+    }
+
+    public String getTravelClass() {
+        return travelClass;
+    }
+
+    public void setTravelClass(String travelClass) {
+        this.travelClass = travelClass;
+    }
+
+    public String getQuota() {
+        return quota;
+    }
+
+    public void setQuota(String quota) {
+        this.quota = quota;
+    }
+
+    public String getPaymentMode() {
+        return paymentMode;
+    }
+
+    public void setPaymentMode(String paymentMode) {
+        this.paymentMode = paymentMode;
+    }
+
     public int getSeatsBooked() {
         return seatsBooked;
     }
@@ -51,4 +117,3 @@ public class CreateBookingRequest {
         this.seatsBooked = seatsBooked;
     }
 }
-

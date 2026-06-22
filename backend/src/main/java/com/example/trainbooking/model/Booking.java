@@ -28,6 +28,20 @@ public class Booking {
     @NotBlank
     private String passengerEmail;
 
+    private String passengerMobile;
+    private int passengerAge;
+    private String passengerGender;
+    private String travelClass;
+    private String quota;
+    private String paymentMode;
+    private String paymentStatus;
+    private String paymentOrderId;
+    private String paymentTransactionId;
+    private String paymentGateway;
+    private String pnrNumber;
+    private String coach;
+    private String berth;
+
     @Min(1)
     private int seatsBooked;
 
@@ -62,6 +76,110 @@ public class Booking {
 
     public void setPassengerEmail(String passengerEmail) {
         this.passengerEmail = passengerEmail;
+    }
+
+    public String getPassengerMobile() {
+        return passengerMobile;
+    }
+
+    public void setPassengerMobile(String passengerMobile) {
+        this.passengerMobile = passengerMobile;
+    }
+
+    public int getPassengerAge() {
+        return passengerAge;
+    }
+
+    public void setPassengerAge(int passengerAge) {
+        this.passengerAge = passengerAge;
+    }
+
+    public String getPassengerGender() {
+        return passengerGender;
+    }
+
+    public void setPassengerGender(String passengerGender) {
+        this.passengerGender = passengerGender;
+    }
+
+    public String getTravelClass() {
+        return travelClass;
+    }
+
+    public void setTravelClass(String travelClass) {
+        this.travelClass = travelClass;
+    }
+
+    public String getQuota() {
+        return quota;
+    }
+
+    public void setQuota(String quota) {
+        this.quota = quota;
+    }
+
+    public String getPaymentMode() {
+        return paymentMode;
+    }
+
+    public void setPaymentMode(String paymentMode) {
+        this.paymentMode = paymentMode;
+    }
+
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+
+    public String getPaymentOrderId() {
+        return paymentOrderId;
+    }
+
+    public void setPaymentOrderId(String paymentOrderId) {
+        this.paymentOrderId = paymentOrderId;
+    }
+
+    public String getPaymentTransactionId() {
+        return paymentTransactionId;
+    }
+
+    public void setPaymentTransactionId(String paymentTransactionId) {
+        this.paymentTransactionId = paymentTransactionId;
+    }
+
+    public String getPaymentGateway() {
+        return paymentGateway;
+    }
+
+    public void setPaymentGateway(String paymentGateway) {
+        this.paymentGateway = paymentGateway;
+    }
+
+    public String getPnrNumber() {
+        return pnrNumber;
+    }
+
+    public void setPnrNumber(String pnrNumber) {
+        this.pnrNumber = pnrNumber;
+    }
+
+    public String getCoach() {
+        return coach;
+    }
+
+    public void setCoach(String coach) {
+        this.coach = coach;
+    }
+
+    public String getBerth() {
+        return berth;
+    }
+
+    public void setBerth(String berth) {
+        this.berth = berth;
     }
 
     public int getSeatsBooked() {
@@ -104,4 +222,3 @@ public class Booking {
         this.train = train;
     }
 }
-

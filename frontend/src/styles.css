@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #18212f;
-  background: #eef3f7;
+  background: #f2f5f9;
 }
 
 * {
@@ -13,7 +13,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -31,6 +32,65 @@ button:disabled {
   opacity: 0.6;
 }
 
+.login-page {
+  align-items: center;
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.login-panel {
+  background: #ffffff;
+  border: 1px solid #d9e2ea;
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(30, 45, 70, 0.12);
+  display: grid;
+  gap: 22px;
+  margin: 0 auto;
+  max-width: 430px;
+  padding: 28px;
+  width: 100%;
+}
+
+.login-brand {
+  display: grid;
+  gap: 8px;
+}
+
+.login-brand h1 {
+  font-size: 2.4rem;
+}
+
+.login-brand span {
+  color: #657386;
+  line-height: 1.5;
+}
+
+.brand-icon {
+  align-items: center;
+  background: #e8eefb;
+  border-radius: 8px;
+  color: #183b7a;
+  display: flex;
+  height: 58px;
+  justify-content: center;
+  width: 58px;
+}
+
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.login-form button {
+  background: #183b7a;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 800;
+  min-height: 44px;
+  padding: 0 16px;
+}
+
 .app-shell {
   margin: 0 auto;
   max-width: 1180px;
@@ -39,13 +99,18 @@ button:disabled {
 
 .topbar {
   align-items: center;
+  background: #102a5c;
+  border-radius: 8px;
+  color: #ffffff;
   display: flex;
+  gap: 16px;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
+  padding: 18px;
 }
 
 .eyebrow {
-  color: #0f766e;
+  color: #d89b1d;
   font-size: 0.78rem;
   font-weight: 800;
   margin: 0 0 4px;
@@ -77,11 +142,98 @@ h2 {
 
 .stat {
   align-items: center;
-  color: #0f766e;
+  color: #183b7a;
   display: flex;
   font-weight: 800;
   gap: 8px;
   padding: 12px 16px;
+}
+
+.top-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.user-pill {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d9e2ea;
+  border-radius: 8px;
+  color: #263243;
+  display: flex;
+  font-weight: 800;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 14px;
+}
+
+.logout-button {
+  background: #263243;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 800;
+  min-height: 46px;
+  padding: 0 14px;
+}
+
+.page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.page-tabs button {
+  background: #ffffff;
+  border: 1px solid #d9e2ea;
+  border-radius: 8px;
+  color: #526173;
+  font-weight: 800;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.page-tabs button.active {
+  background: #183b7a;
+  border-color: #183b7a;
+  color: #ffffff;
+}
+
+.global-message {
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+
+.summary-grid,
+.reports-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ea;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(30, 45, 70, 0.08);
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.stat-card span {
+  color: #657386;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.stat-card strong {
+  color: #18212f;
+  font-size: 1.8rem;
 }
 
 .workspace {
@@ -126,15 +278,26 @@ input {
   padding: 0 12px;
 }
 
-input:focus {
-  border-color: #0f766e;
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+select {
+  background: #ffffff;
+  border: 1px solid #c8d4df;
+  border-radius: 6px;
+  color: #18212f;
+  min-height: 42px;
+  outline: none;
+  padding: 0 12px;
+}
+
+input:focus,
+select:focus {
+  border-color: #183b7a;
+  box-shadow: 0 0 0 3px rgba(24, 59, 122, 0.14);
 }
 
 .grid-form button,
 .booking-form button {
   align-self: end;
-  background: #0f766e;
+  background: #183b7a;
   border-radius: 6px;
   color: #ffffff;
   font-weight: 800;
@@ -171,8 +334,8 @@ input:focus {
 }
 
 .train-card.active {
-  background: #e7f6f4;
-  border-color: #0f766e;
+  background: #e8eefb;
+  border-color: #183b7a;
 }
 
 .train-card div:first-child {
@@ -222,10 +385,17 @@ td span {
   margin-top: 14px;
 }
 
+.form-row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
 .fare-box {
-  background: #f1f5f9;
+  background: #fff7df;
+  border: 1px solid #f1d28a;
   border-radius: 6px;
-  color: #0f172a;
+  color: #69440a;
   font-weight: 800;
   padding: 12px;
 }
@@ -234,13 +404,54 @@ td span {
   margin-top: 18px;
 }
 
+.section-heading {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-heading .panel-title {
+  margin-bottom: 0;
+}
+
+.secondary-button,
+.small-action {
+  background: #e8eefb;
+  border: 1px solid #c7d5f0;
+  border-radius: 6px;
+  color: #183b7a;
+  font-weight: 800;
+  min-height: 38px;
+  padding: 0 12px;
+}
+
+.small-action {
+  min-height: 34px;
+}
+
+.reports-grid {
+  align-items: stretch;
+}
+
+.wide-panel {
+  grid-column: 1 / -1;
+}
+
+.report-copy {
+  color: #526173;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
 
 table {
   border-collapse: collapse;
-  min-width: 860px;
+  min-width: 1120px;
   width: 100%;
 }
 
@@ -295,13 +506,30 @@ th {
 
   .topbar,
   .workspace,
-  .grid-form {
+  .grid-form,
+  .form-row,
+  .summary-grid,
+  .reports-grid {
     display: grid;
     grid-template-columns: 1fr;
   }
 
+  .top-actions {
+    justify-content: stretch;
+  }
+
+  .top-actions > * {
+    justify-content: center;
+    width: 100%;
+  }
+
   .stat {
     justify-self: start;
+  }
+
+  .section-heading {
+    align-items: stretch;
+    display: grid;
   }
 
   h1 {

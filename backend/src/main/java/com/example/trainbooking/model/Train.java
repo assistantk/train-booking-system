@@ -28,6 +28,13 @@ public class Train {
     @NotBlank
     private String destination;
 
+    private String sourceCode;
+    private String destinationCode;
+    private String trainType;
+    private String runDays;
+    private String duration;
+    private String platform;
+
     private LocalTime departureTime;
     private LocalTime arrivalTime;
 
@@ -79,6 +86,54 @@ public class Train {
         this.destination = destination;
     }
 
+    public String getSourceCode() {
+        return sourceCode;
+    }
+
+    public void setSourceCode(String sourceCode) {
+        this.sourceCode = sourceCode;
+    }
+
+    public String getDestinationCode() {
+        return destinationCode;
+    }
+
+    public void setDestinationCode(String destinationCode) {
+        this.destinationCode = destinationCode;
+    }
+
+    public String getTrainType() {
+        return trainType;
+    }
+
+    public void setTrainType(String trainType) {
+        this.trainType = trainType;
+    }
+
+    public String getRunDays() {
+        return runDays;
+    }
+
+    public void setRunDays(String runDays) {
+        this.runDays = runDays;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
     public LocalTime getDepartureTime() {
         return departureTime;
     }
@@ -119,4 +174,3 @@ public class Train {
         this.fare = fare;
     }
 }
-
